@@ -1,0 +1,82 @@
+h1 {
+  text-align: center;
+  font-family: Oswald,sans-serif;
+  color: #008991;
+}
+
+h2 {
+  font-family: Oswald,sans-serif;
+  color: #008991;
+}
+
+label {
+  font-family: Oswald,sans-serif;
+}
+
+button {
+  color: #008991;
+  font-size: 1.2rem;
+  font-family: Oswald,sans-serif;
+  font-weight: 500;
+  padding: 7px 40px;
+  border-radius: 5px;
+  border: 1px solid #008991;
+  cursor: pointer;
+  display: inline-block;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div1, .div2 {
+  flex-basis: 50%;
+}
+
+@media (max-width: 767px) {
+  .div1, .div2 {
+    flex-basis: 100%;
+  }
+}
+
+.content {
+  width: 58%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.histo-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 8px;
+}
+
+.histo-table th,
+.histo-table td {
+  font-family: Oswald,sans-serif;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.histo-table thead {
+  background-color: #008991;
+  color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.histo-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.histo-table tbody tr:hover {
+  background-color: #e3e3e3;
+}
+

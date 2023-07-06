@@ -1,0 +1,87 @@
+<h1>Convertisseur EUR / USD</h1>
+<div class="container">
+  <div class="content">
+
+    <div class="container">
+      <div class="div1">
+        <label>
+          Choisir la devise de départ:
+          <select [(ngModel)]="inputCurrency" (change)="onChangeDevise()">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="div2">
+        <label>
+          Montant en {{ inputCurrency }}:
+          <input type="number" [(ngModel)]="montant" (input)="onChange()">
+        </label>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="div1">
+        <label>
+          Taux de change réel: {{ tauxDeChange | number:'1.2-2'}}
+        </label>
+      </div>
+
+      <div class="div2">
+        <label>
+          Taux de change fixe:
+          <input type="number" [(ngModel)]="tauxDeChangeFixe" (input)="onChange()">
+        </label>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="div1">
+        <button (click)="convertir()">Convertir</button>
+      </div>
+
+      <div class="div1">
+        <label style="font-size: 24px;">
+          <span *ngIf="inputCurrency === 'EUR'">{{ montant | number:'1.3-3'}} EUR = {{ montantUsd | number:'1.3-3'}} USD</span>
+          <span *ngIf="inputCurrency === 'USD'">{{ montant | number:'1.3-3'}} USD = {{ montantEur | number:'1.3-3'}} EUR</span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <h2>Historique des conversions</h2>
+      <table class="histo-table">
+        <thead>
+          <tr>
+            <th>Taux réel</th>
+            <th>Taux saisie</th>
+            <th>Valeur initiale</th>
+            <th>Valeur calculée</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let conversion of historique">
+            <td>{{ conversion.tauxReel | number:'1.2-2'}}</td>
+            <td>{{ conversion.tauxSaisie | number:'1.2-2'}}</td>
+            <td>
+              {{ conversion.valeurInitiale | number:'1.3-3' }}
+              {{ conversion.inputCurrency }}
+            </td>
+            <td>
+              {{ conversion.valeurCalculee | number:'1.3-3'}}
+              {{ conversion.outputCurrency }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

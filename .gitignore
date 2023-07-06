@@ -1,24 +1,71 @@
-# Compiled class file
-*.class
+# Dependency directories
+/node_modules
+/dist
+/bazel-out
+/bazel-bin
+/bazel-*/*/execroot
 
-# Log file
+# Generated files
+/*.js
+/*.js.map
+/*.d.ts
+/*.metadata.json
+/*.ngfactory.ts
+/*.ngstyle.ts
+/*.ngsummary.json
+/*.ngsummary.ts
+/*.ngtypecheck.ts
+/*.ngtypecheck.tsbuildinfo
+/*.ngtypecheck.tsincrementalinfo
+/*.ngfactory.js
+/*.ngstyle.js
+/*.ngsummary.js
+
+# Compiled output
+/out
+/tmp
+
+# Log files
+/log
 *.log
 
-# BlueJ files
-*.ctxt
+# IDE specific files
+/.idea
+/.vscode
+*.iml
+*.ipr
+*.iws
+/.vs
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Environment files
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+/src/environments/environment.*.ts
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
+# Testing files
+/karma-coverage
+/coverage
+/test-results
+
+# Miscellaneous
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.lock
 *.zip
+*.tgz
 *.tar.gz
-*.rar
+*.tar.bz2
+*.tar
+*.gz
+*.bz2
+*.log.*
+*.bak.*
+*.orig.*
+*~
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Exclude sensitive configuration files
+/src/app/config/secret.config.ts
+/src/app/config/secret.config.prod.ts
+
